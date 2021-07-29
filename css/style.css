@@ -68,6 +68,7 @@ p {
 
 .title-after {
     position: relative;
+
 }
 
 .title-after::after {
@@ -75,23 +76,14 @@ p {
     bottom: -10px;
     left: 50%;
     width: 10%;
-    height: 1px;
     transform: translateX(-50%);
+    height: 1px;
     background: #E76F51;
     content: "";
-    animation: after 3s infinite;
-}
-
-@keyframes after {
-    50% {
-        width: 20%;
-    }
-
-    100% {
-        width: 0%;
-    }
 
 }
+
+
 
 /* ========================
     common css end
@@ -106,9 +98,6 @@ p {
     padding-top: 150px;
 }
 
-.banner-part .text-width {
-    width: 459px;
-}
 
 /* ================================
     header part start 
@@ -213,13 +202,14 @@ p {
 }
 
 .sponsor-part .img {
-    width: 200px;
+
     height: 100px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .4s;
+    overflow: hidden;
 }
 
 .sponsor-part .img:hover img {
@@ -267,3 +257,78 @@ footer .left {
 /* ========================
     footer part end
 ======================= */
+
+/* 
+============================
+    responsive css start
+============================ */
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+    nav {
+        display: none !important;
+    }
+
+    .banner-part {
+        padding-top: 100px;
+    }
+
+    .main {
+        flex-direction: column;
+
+    }
+
+    .banner-part .main .text,
+    .img {
+        width: 100% !important;
+    }
+
+
+    .banner-part .main .text {
+        margin-bottom: 30px;
+    }
+
+    .feature-part .row {
+        margin-top: 50px;
+    }
+
+    .card-part {
+        margin-top: 60px;
+    }
+
+    .happy-client-part {
+        margin-top: 80px;
+    }
+
+    .faq-part {
+        margin-top: 80px;
+    }
+
+    .faq-part .row {
+        margin-top: 70px;
+    }
+
+    .sponsor-part {
+        margin-top: 75px;
+    }
+
+    footer {
+        padding-bottom: 30px;
+        padding-top: 60px;
+    }
+
+    footer .left {
+        order: 2;
+        margin-top: 50px;
+    }
+
+    footer .right {
+
+        order: 1;
+    }
+
+}
+
+
+/* ============================
+    responsive css end
+============================ */
